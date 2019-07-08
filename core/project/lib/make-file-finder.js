@@ -12,6 +12,7 @@ function makeFileFinder(rootPath, packageConfigs) {
     cwd: rootPath,
     absolute: true,
     followSymlinkedDirectories: false,
+    caseSensitiveMatch: false,
     // POSIX results always need to be normalized
     transform: fp => path.normalize(fp),
   };
